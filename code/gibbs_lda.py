@@ -21,24 +21,38 @@ class GibbsLDA(object):
     def init_tables(self):
         self.topic_word_table = np.zeros((self.vocab_num, self.topics), dtype=np.int)
         self.topic_doc_table = np.zeros((self.docs_num, self.topics), dtype=np.int)
-        self.assign_word_topic = np.random.randint(self.topics, size=self.docword.shape[0])
+        # add topic column to docword array
+        self.random_topic_assign = np.random.randint(self.topics, size=self.docword.shape[0])
+        self.docword = np.column_stack((self.docword, self.random_topic_assign))
+        self.docword = np.core.records.fromarrays(self.docword.transpose(),names='docID, wordID, count, topicID')
 
-    def assign():
-        pass
+    def fill_tables(self):
+        # count the number of words in each topic for each word over all document
+        self.docword = np.sort(self.docword, order=['wordID','topicID'])
+        _, firstWordIDs, wordCounts = np.unique(self.docword['wordID'], return_index=True, return_counts=True)
+        for i,valW in enumerate(firstWordIDs):
+            topicIDs, firstTopicIDs, topicCounts = np.unique(self.docword['topicID'][valW:valW+wordCounts[i]], return_index=True, return_counts=True)
+            for j,valT in enumerate(firstTopicIDs):
+                valT = valT + valW
+                self.topic_word_table[i,topicIDs[j]] = np.sum(self.docword['count'][valT:valT+topicCounts[j]])
 
-
-
-
-
-
+        # count the number of words in each topic for each document 
+        self.docword = np.sort(self.docword, order=['docID','topicID'])
+        _, firstDocIDs, docCounts = np.unique(self.docword['docID'], return_index=True, return_counts=True)
+        for i,valW in enumerate(firstDocIDs):
+            topicIDs, firstTopicIDs, topicCounts = np.unique(self.docword['topicID'][valW:valW+docCounts[i]], return_index=True, return_counts=True)
+            for j,valT in enumerate(firstTopicIDs):
+                valT = valT + valW
+                self.topic_doc_table[i,topicIDs[j]] = np.sum(self.docword['count'][valT:valT+topicCounts[j]])
 
 
 
 
 def read_test(file1, file2):
     lda = GibbsLDA(docword=file1, vocab=file2)
-    print lda.vocab
-    print lda.docword
+    lda.fill_tables()
+    print lda.topic_word_table
+    print lda.topic_doc_table
     return lda
 
 if __name__ == '__main__':
