@@ -1,4 +1,5 @@
 import numpy as np
+import time
 
 class GibbsLDA(object):
     """Gibbs sampling for Latent Dirichlet Allocation."""
@@ -55,80 +56,93 @@ class GibbsLDA(object):
             for j,val in enumerate(topicIDs):
                 self.topic_doc_table[docIDs[i]-1,val] = topicCounts[j]
 
+    # def gibbs_sampling(self):
+    #     for i in range(10):
+    #         print i
+    #         if i > 10:
+    #             break
+    #         j = 0
+    #         print 'docword.size:',self.docword.size
+    #         for w in self.docword:
+    #             j += 1
+    #             if j%10000 == 0:
+    #                 print j
+                # self.update_topic_assignment(w)
+
     def gibbs_sampling(self):
+        prob = np.zeros(self.topics)
         for i in range(10):
             print i
-            if i > 0:
-                break
+            t = time.time()
+            # if i > 10:
+            #     break
             # j = 0
+            print 'docword.size:',self.docword.size
             for w in self.docword:
                 # j += 1
-                # print 
-                # print j
-                # if j>20:
-                #     break
-                # print w
-                # print 'w[topic]:',w['topicID']
-                # print self.topic_word_table[w['wordID']-1]
-                # print self.topic_doc_table[w['docID']-1]
-                self.update_topic_assignment(w)
-                # print 'w[topic]:',w['topicID']
-                # print self.topic_word_table[w['wordID']-1]
-                # print self.topic_doc_table[w['docID']-1]
+                # if j%10000 == 0:
+                #     print j
+                wID = w['wordID']-1
+                dID = w['docID']-1
+                tID = w['topicID']
+                self.topic_word_table[wID,tID] -= 1
+                self.topic_doc_table[dID,tID] -= 1
 
+                for t in range(self.topics):
+                    left = (self.topic_word_table[wID,t]+self.beta)*1.0/(np.sum(self.topic_word_table[:,t])+self.vocab_num*self.beta)
+                    right = (self.topic_doc_table[dID,t]+self.alpha)*1.0/(np.sum(self.topic_doc_table[dID])+self.topics*self.alpha)
+                    prob[t] = left*right
+                prob = prob/np.sum(prob)
+                # print prob
+                sample_topic = np.nonzero(np.random.multinomial(1,prob))[0][0]
+                w['topicID'] = sample_topic
+                self.topic_word_table[wID,sample_topic] += 1
+                self.topic_doc_table[dID,sample_topic] += 1
+            self.latent_variables()
+            print time.time()-t
 
-    def update_topic_assignment(self,w):
-        prob = np.zeros(self.topics)
-        wordID = w['wordID']-1
-        docID = w['docID']-1
-        topicID = w['topicID']
+    # def update_topic_assignment(self,w):
+        # prob = np.zeros(self.topics)
+        # wordID = w['wordID']-1
+        # docID = w['docID']-1
+        # topicID = w['topicID']
 
-        self.topic_word_table[wordID,topicID] -= 1
-        self.topic_doc_table[docID,topicID] -= 1
+        # self.topic_word_table[wordID,topicID] -= 1
+        # self.topic_doc_table[docID,topicID] -= 1
 
-        for t in range(self.topics):
-            left = (self.topic_word_table[wordID,t]+self.beta)*1.0/(np.sum(self.topic_word_table[:,t])+self.vocab_num*self.beta)
-            right = (self.topic_doc_table[docID,t]+self.alpha)*1.0/(np.sum(self.topic_doc_table[docID])+self.topics*self.alpha)
-            prob[t] = left*right
-        prob = prob/np.sum(prob)
-        print prob
-        sample_topic = np.nonzero(np.random.multinomial(1,prob))[0][0]
-        w['topicID'] = sample_topic
-        self.topic_word_table[wordID,sample_topic] += 1
-        self.topic_doc_table[docID,sample_topic] += 1
+        # for t in range(self.topics):
+        #     left = (self.topic_word_table[wordID,t]+self.beta)*1.0/(np.sum(self.topic_word_table[:,t])+self.vocab_num*self.beta)
+        #     right = (self.topic_doc_table[docID,t]+self.alpha)*1.0/(np.sum(self.topic_doc_table[docID])+self.topics*self.alpha)
+        #     prob[t] = left*right
+        # prob = prob/np.sum(prob)
+        # # print prob
+        # sample_topic = np.nonzero(np.random.multinomial(1,prob))[0][0]
+        # w['topicID'] = sample_topic
+        # self.topic_word_table[wordID,sample_topic] += 1
+        # self.topic_doc_table[docID,sample_topic] += 1
 
 
     def latent_variables(self):
-        result = []
+        top_words = []
+        top_probs = []
         for k in range(self.topics):
             top_wordIDs = np.argsort(self.topic_word_table[:,k])
-            result.append(self.vocab[top_wordIDs[-20:]])
-        self.result = np.array(result)
-
-        # for k in range(lda.topics):
-        #     result = np.sort(lda.topic_word_table[:,k])[-10:]
-        #     print result
-        #     words = []
-        #     for j in result:
-        #         words.append(lda.vocab[j-1])
-        #     lda.result.append(words)
-        #     print 'topic:',k
-        #     print words
-
-
+            top_words.append(self.vocab[top_wordIDs[-20:]])
+            top_probs.append(self.topic_word_table[top_wordIDs[-20:],k]*1.0/np.sum(self.topic_word_table[:,k]))
+        self.top_words = np.array(top_words)
+        self.top_probs = np.array(top_probs)
+        print self.top_words
+        print self.top_probs
 
 
 def read_test(args):
     lda = GibbsLDA(*args)
-    # print lda.topic_doc_table
-    # print lda.topic_word_table
-    # print lda.docword[:50]
     # lda.gibbs_sampling()
     # lda.latent_variables()
     return lda
 
 if __name__ == '__main__':
-    nips = ['../data/docword.nips.txt', '../data/vocab.nips.txt',1,1,2]
-    kos = ['../data/docword.kos.txt', '../data/vocab.kos.txt',1,1,2]
-    nips_lda = read_test(nips)
-    kos_lda = read_test(kos)
+    nips_input = ['../data/docword.nips.txt', '../data/vocab.nips.txt',1,1,5]
+    kos_input = ['../data/docword.kos.txt', '../data/vocab.kos.txt',1,1,10]
+    nips = read_test(nips_input)
+    # kos = read_test(kos_input)
