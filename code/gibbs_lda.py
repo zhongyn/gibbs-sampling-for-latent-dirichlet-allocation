@@ -71,17 +71,19 @@ class GibbsLDA(object):
 
     def gibbs_sampling(self):
         prob = np.zeros(self.topics)
-        for i in range(10):
+        self.words_result = []
+        # self.prob_result = []
+        for i in range(30):
             print i
-            t = time.time()
-            # if i > 10:
+            # t = time.time()
+            # if i > 3:
             #     break
             # j = 0
             print 'docword.size:',self.docword.size
             for w in self.docword:
                 # j += 1
-                # if j%10000 == 0:
-                #     print j
+                # if j == 10000:
+                #     break
                 wID = w['wordID']-1
                 dID = w['docID']-1
                 tID = w['topicID']
@@ -99,7 +101,7 @@ class GibbsLDA(object):
                 self.topic_word_table[wID,sample_topic] += 1
                 self.topic_doc_table[dID,sample_topic] += 1
             self.latent_variables()
-            print time.time()-t
+            # print time.time()-t
 
     # def update_topic_assignment(self,w):
         # prob = np.zeros(self.topics)
@@ -127,12 +129,21 @@ class GibbsLDA(object):
         top_probs = []
         for k in range(self.topics):
             top_wordIDs = np.argsort(self.topic_word_table[:,k])
-            top_words.append(self.vocab[top_wordIDs[-20:]])
-            top_probs.append(self.topic_word_table[top_wordIDs[-20:],k]*1.0/np.sum(self.topic_word_table[:,k]))
+            top_words.append(self.vocab[top_wordIDs[-10:]])
+            top_probs.append(self.topic_word_table[top_wordIDs[-10:],k]*1.0/np.sum(self.topic_word_table[:,k]))
         self.top_words = np.array(top_words)
         self.top_probs = np.array(top_probs)
         print self.top_words
         print self.top_probs
+        self.words_result.append(top_words)
+        # self.prob_result.append(top_probs)
+
+    def save_result(self):
+        print self.words_result
+        # print self.prob_result
+        np.savetxt('../data/top_words_'+str(self.topics)+'.txt', self.words_result, delimiter=',', fmt='%s')
+        np.savetxt('../data/top_probs_'+str(self.topics)+'.txt', self.top_probs, delimiter=',', fmt='%f')
+
 
 
 def read_test(args):
@@ -141,8 +152,20 @@ def read_test(args):
     # lda.latent_variables()
     return lda
 
+def main(args):
+    topics = [2,5,10]
+    alpha = 1
+    beta = 1
+    for t in topics:
+        new_args = args+[alpha,beta,t]
+        lda = GibbsLDA(*new_args)
+        lda.gibbs_sampling()
+        lda.save_result()
+
+
 if __name__ == '__main__':
-    nips_input = ['../data/docword.nips.txt', '../data/vocab.nips.txt',1,1,5]
-    kos_input = ['../data/docword.kos.txt', '../data/vocab.kos.txt',1,1,10]
-    nips = read_test(nips_input)
+    nips_input = ['../data/docword.nips.txt', '../data/vocab.nips.txt']
+    kos_input = ['../data/docword.kos.txt', '../data/vocab.kos.txt']
+    # nips = read_test(nips_input)
     # kos = read_test(kos_input)
+    main(kos_input)

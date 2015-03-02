@@ -1,0 +1,12 @@
+['republicans' 'iraq' 'general' 'war' 'house' 'democratic' 'poll'
+ 'november' 'kerry' 'bush'],['senate' 'iraq' 'general' 'war' 'house' 'democratic' 'poll' 'november'
+ 'kerry' 'bush']
+['republicans' 'iraq' 'general' 'war' 'house' 'democratic' 'poll'
+ 'november' 'kerry' 'bush'],['campaign' 'iraq' 'general' 'war' 'democratic' 'house' 'poll' 'november'
+ 'kerry' 'bush']
+['republicans' 'iraq' 'general' 'war' 'house' 'democratic' 'poll'
+ 'november' 'kerry' 'bush'],['campaign' 'iraq' 'general' 'war' 'house' 'democratic' 'poll' 'november'
+ 'kerry' 'bush']
+['republicans' 'iraq' 'general' 'war' 'house' 'democratic' 'poll'
+ 'november' 'kerry' 'bush'],['campaign' 'general' 'iraq' 'war' 'house' 'democratic' 'poll' 'november'
+ 'kerry' 'bush']
