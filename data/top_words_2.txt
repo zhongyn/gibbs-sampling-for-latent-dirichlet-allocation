@@ -1,12 +1,90 @@
-['republicans' 'iraq' 'general' 'war' 'house' 'democratic' 'poll'
- 'november' 'kerry' 'bush'],['senate' 'iraq' 'general' 'war' 'house' 'democratic' 'poll' 'november'
+['campaign' 'iraq' 'poll' 'house' 'general' 'dean' 'democratic' 'november'
+ 'kerry' 'bush'],['general' 'senate' 'iraq' 'democratic' 'house' 'war' 'poll' 'november'
  'kerry' 'bush']
-['republicans' 'iraq' 'general' 'war' 'house' 'democratic' 'poll'
- 'november' 'kerry' 'bush'],['campaign' 'iraq' 'general' 'war' 'democratic' 'house' 'poll' 'november'
+['house' 'poll' 'iraq' 'campaign' 'dean' 'general' 'november' 'democratic'
+ 'kerry' 'bush'],['general' 'iraq' 'senate' 'democratic' 'house' 'war' 'poll' 'november'
  'kerry' 'bush']
-['republicans' 'iraq' 'general' 'war' 'house' 'democratic' 'poll'
- 'november' 'kerry' 'bush'],['campaign' 'iraq' 'general' 'war' 'house' 'democratic' 'poll' 'november'
+['house' 'administration' 'bushs' 'campaign' 'iraq' 'general' 'democratic'
+ 'dean' 'kerry' 'bush'],['iraq' 'general' 'senate' 'democratic' 'house' 'war' 'poll' 'november'
  'kerry' 'bush']
-['republicans' 'iraq' 'general' 'war' 'house' 'democratic' 'poll'
- 'november' 'kerry' 'bush'],['campaign' 'general' 'iraq' 'war' 'house' 'democratic' 'poll' 'november'
- 'kerry' 'bush']
+['republican' 'bushs' 'administration' 'campaign' 'democratic' 'general'
+ 'iraq' 'dean' 'kerry' 'bush'],['general' 'republicans' 'senate' 'war' 'democratic' 'house' 'poll' 'kerry'
+ 'november' 'bush']
+['president' 'war' 'democratic' 'campaign' 'bushs' 'administration' 'iraq'
+ 'dean' 'kerry' 'bush'],['republicans' 'general' 'senate' 'war' 'democratic' 'house' 'poll' 'kerry'
+ 'november' 'bush']
+['campaign' 'time' 'bushs' 'war' 'president' 'kerry' 'administration'
+ 'dean' 'iraq' 'bush'],['war' 'republicans' 'general' 'senate' 'democratic' 'house' 'poll'
+ 'november' 'kerry' 'bush']
+['john' 'people' 'bushs' 'dean' 'time' 'president' 'war' 'administration'
+ 'iraq' 'bush'],['polls' 'republicans' 'general' 'senate' 'house' 'democratic' 'poll'
+ 'november' 'kerry' 'bush']
+['american' 'news' 'bushs' 'time' 'people' 'president' 'administration'
+ 'war' 'iraq' 'bush'],['polls' 'general' 'republicans' 'senate' 'house' 'democratic' 'poll'
+ 'november' 'bush' 'kerry']
+['news' 'american' 'bushs' 'time' 'people' 'president' 'administration'
+ 'war' 'iraq' 'bush'],['polls' 'general' 'republicans' 'senate' 'house' 'democratic' 'poll'
+ 'november' 'bush' 'kerry']
+['news' 'american' 'bushs' 'time' 'people' 'president' 'administration'
+ 'war' 'iraq' 'bush'],['democrats' 'general' 'republicans' 'senate' 'house' 'democratic' 'poll'
+ 'bush' 'november' 'kerry']
+['news' 'american' 'bushs' 'time' 'people' 'administration' 'president'
+ 'war' 'iraq' 'bush'],['general' 'dean' 'republicans' 'house' 'senate' 'democratic' 'poll' 'bush'
+ 'november' 'kerry']
+['news' 'american' 'bushs' 'time' 'people' 'administration' 'president'
+ 'war' 'iraq' 'bush'],['polls' 'dean' 'republicans' 'house' 'senate' 'democratic' 'poll' 'bush'
+ 'november' 'kerry']
+['american' 'news' 'bushs' 'time' 'people' 'administration' 'president'
+ 'war' 'iraq' 'bush'],['polls' 'republicans' 'house' 'dean' 'senate' 'democratic' 'poll' 'bush'
+ 'november' 'kerry']
+['american' 'news' 'bushs' 'time' 'people' 'administration' 'president'
+ 'war' 'iraq' 'bush'],['polls' 'republicans' 'house' 'dean' 'senate' 'democratic' 'poll' 'bush'
+ 'november' 'kerry']
+['american' 'news' 'bushs' 'time' 'people' 'administration' 'president'
+ 'war' 'iraq' 'bush'],['polls' 'republicans' 'house' 'dean' 'senate' 'democratic' 'poll' 'bush'
+ 'november' 'kerry']
+['american' 'news' 'bushs' 'time' 'people' 'administration' 'president'
+ 'war' 'iraq' 'bush'],['republicans' 'polls' 'house' 'dean' 'senate' 'democratic' 'poll' 'bush'
+ 'november' 'kerry']
+['news' 'general' 'bushs' 'time' 'people' 'administration' 'president'
+ 'war' 'iraq' 'bush'],['republicans' 'polls' 'house' 'dean' 'senate' 'democratic' 'poll' 'bush'
+ 'november' 'kerry']
+['news' 'general' 'bushs' 'time' 'people' 'administration' 'president'
+ 'war' 'iraq' 'bush'],['republicans' 'polls' 'house' 'dean' 'senate' 'democratic' 'poll' 'bush'
+ 'november' 'kerry']
+['kerry' 'general' 'bushs' 'time' 'people' 'administration' 'president'
+ 'war' 'iraq' 'bush'],['republicans' 'polls' 'house' 'dean' 'senate' 'democratic' 'bush' 'poll'
+ 'kerry' 'november']
+['kerry' 'general' 'bushs' 'time' 'people' 'administration' 'president'
+ 'war' 'iraq' 'bush'],['republicans' 'house' 'polls' 'dean' 'senate' 'democratic' 'poll' 'bush'
+ 'kerry' 'november']
+['general' 'kerry' 'bushs' 'time' 'administration' 'people' 'president'
+ 'war' 'iraq' 'bush'],['republicans' 'polls' 'house' 'dean' 'senate' 'democratic' 'bush' 'poll'
+ 'kerry' 'november']
+['general' 'bushs' 'kerry' 'time' 'people' 'administration' 'president'
+ 'war' 'iraq' 'bush'],['primary' 'polls' 'house' 'dean' 'senate' 'democratic' 'bush' 'poll'
+ 'kerry' 'november']
+['bushs' 'general' 'time' 'kerry' 'people' 'administration' 'president'
+ 'war' 'iraq' 'bush'],['primary' 'polls' 'house' 'dean' 'senate' 'democratic' 'bush' 'poll'
+ 'kerry' 'november']
+['general' 'bushs' 'time' 'kerry' 'administration' 'people' 'president'
+ 'war' 'iraq' 'bush'],['primary' 'polls' 'house' 'dean' 'senate' 'democratic' 'bush' 'poll'
+ 'kerry' 'november']
+['general' 'bushs' 'kerry' 'time' 'administration' 'people' 'president'
+ 'war' 'iraq' 'bush'],['primary' 'house' 'polls' 'dean' 'senate' 'democratic' 'bush' 'poll'
+ 'kerry' 'november']
+['bushs' 'general' 'kerry' 'time' 'administration' 'people' 'president'
+ 'war' 'iraq' 'bush'],['primary' 'house' 'polls' 'dean' 'senate' 'democratic' 'bush' 'poll'
+ 'kerry' 'november']
+['campaign' 'bushs' 'kerry' 'time' 'administration' 'people' 'president'
+ 'war' 'iraq' 'bush'],['primary' 'house' 'polls' 'dean' 'senate' 'democratic' 'bush' 'poll'
+ 'kerry' 'november']
+['bushs' 'general' 'kerry' 'time' 'administration' 'people' 'president'
+ 'war' 'iraq' 'bush'],['primary' 'house' 'polls' 'dean' 'senate' 'democratic' 'bush' 'poll'
+ 'kerry' 'november']
+['general' 'bushs' 'kerry' 'time' 'administration' 'people' 'president'
+ 'war' 'iraq' 'bush'],['primary' 'house' 'polls' 'dean' 'senate' 'democratic' 'bush' 'poll'
+ 'kerry' 'november']
+['bushs' 'campaign' 'time' 'kerry' 'administration' 'people' 'president'
+ 'war' 'iraq' 'bush'],['primary' 'house' 'polls' 'dean' 'senate' 'democratic' 'bush' 'poll'
+ 'kerry' 'november']

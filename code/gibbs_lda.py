@@ -141,8 +141,8 @@ class GibbsLDA(object):
     def save_result(self):
         print self.words_result
         # print self.prob_result
-        np.savetxt('../data/top_words_'+str(self.topics)+'.txt', self.words_result, delimiter=',', fmt='%s')
-        np.savetxt('../data/top_probs_'+str(self.topics)+'.txt', self.top_probs, delimiter=',', fmt='%f')
+        np.savetxt('../data/nips_top_words_'+str(self.topics)+'.txt', self.words_result, delimiter=',', fmt='%s')
+        np.savetxt('../data/nips_top_probs_'+str(self.topics)+'.txt', self.top_probs, delimiter=',', fmt='%f')
 
 
 
@@ -168,4 +168,5 @@ if __name__ == '__main__':
     kos_input = ['../data/docword.kos.txt', '../data/vocab.kos.txt']
     # nips = read_test(nips_input)
     # kos = read_test(kos_input)
-    main(kos_input)
+    main(nips_input)
+    # main(kos_input)
