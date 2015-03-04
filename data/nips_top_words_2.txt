@@ -1,0 +1,90 @@
+['error' 'set' 'neural' 'data' 'algorithm' 'input' 'learning' 'function'
+ 'model' 'network'],['unit' 'training' 'system' 'set' 'neural' 'input' 'function' 'learning'
+ 'model' 'network']
+['set' 'error' 'neural' 'input' 'data' 'learning' 'function' 'algorithm'
+ 'model' 'network'],['training' 'unit' 'system' 'set' 'neural' 'input' 'function' 'learning'
+ 'model' 'network']
+['error' 'neural' 'set' 'input' 'learning' 'network' 'data' 'function'
+ 'algorithm' 'model'],['training' 'unit' 'set' 'system' 'neural' 'function' 'input' 'learning'
+ 'model' 'network']
+['error' 'set' 'problem' 'distribution' 'network' 'learning' 'function'
+ 'data' 'model' 'algorithm'],['training' 'set' 'unit' 'system' 'function' 'neural' 'learning' 'input'
+ 'model' 'network']
+['parameter' 'method' 'problem' 'set' 'distribution' 'learning' 'function'
+ 'model' 'data' 'algorithm'],['output' 'training' 'function' 'unit' 'system' 'neural' 'learning' 'input'
+ 'model' 'network']
+['parameter' 'method' 'distribution' 'problem' 'set' 'learning' 'model'
+ 'data' 'function' 'algorithm'],['function' 'training' 'output' 'unit' 'system' 'learning' 'neural' 'model'
+ 'input' 'network']
+['parameter' 'distribution' 'method' 'problem' 'set' 'model' 'learning'
+ 'data' 'function' 'algorithm'],['weight' 'training' 'output' 'learning' 'unit' 'system' 'neural' 'model'
+ 'input' 'network']
+['parameter' 'distribution' 'method' 'problem' 'set' 'model' 'data'
+ 'learning' 'function' 'algorithm'],['neuron' 'training' 'learning' 'output' 'unit' 'system' 'neural' 'model'
+ 'input' 'network']
+['distribution' 'error' 'method' 'problem' 'set' 'model' 'data' 'learning'
+ 'function' 'algorithm'],['training' 'neuron' 'learning' 'output' 'unit' 'system' 'neural' 'model'
+ 'input' 'network']
+['distribution' 'error' 'method' 'problem' 'set' 'model' 'data' 'learning'
+ 'function' 'algorithm'],['weight' 'neuron' 'learning' 'output' 'unit' 'system' 'neural' 'model'
+ 'input' 'network']
+['training' 'method' 'error' 'problem' 'set' 'data' 'model' 'learning'
+ 'algorithm' 'function'],['pattern' 'learning' 'neuron' 'output' 'unit' 'system' 'neural' 'model'
+ 'input' 'network']
+['training' 'method' 'error' 'problem' 'set' 'data' 'model' 'algorithm'
+ 'learning' 'function'],['pattern' 'learning' 'neuron' 'output' 'unit' 'system' 'neural' 'model'
+ 'input' 'network']
+['method' 'network' 'error' 'problem' 'set' 'data' 'model' 'algorithm'
+ 'learning' 'function'],['pattern' 'learning' 'neuron' 'output' 'unit' 'neural' 'system' 'model'
+ 'input' 'network']
+['training' 'error' 'problem' 'network' 'set' 'data' 'model' 'algorithm'
+ 'learning' 'function'],['pattern' 'learning' 'neuron' 'output' 'unit' 'neural' 'system' 'model'
+ 'input' 'network']
+['training' 'error' 'problem' 'network' 'set' 'data' 'model' 'algorithm'
+ 'learning' 'function'],['pattern' 'learning' 'neuron' 'output' 'unit' 'neural' 'system' 'model'
+ 'input' 'network']
+['training' 'error' 'problem' 'network' 'set' 'data' 'model' 'algorithm'
+ 'learning' 'function'],['pattern' 'learning' 'output' 'neuron' 'unit' 'neural' 'system' 'model'
+ 'input' 'network']
+['training' 'error' 'problem' 'set' 'data' 'network' 'model' 'algorithm'
+ 'function' 'learning'],['learning' 'pattern' 'output' 'neuron' 'unit' 'neural' 'system' 'model'
+ 'input' 'network']
+['training' 'problem' 'error' 'set' 'data' 'model' 'network' 'algorithm'
+ 'function' 'learning'],['pattern' 'cell' 'output' 'neuron' 'unit' 'neural' 'system' 'model'
+ 'input' 'network']
+['training' 'error' 'problem' 'set' 'data' 'model' 'network' 'algorithm'
+ 'function' 'learning'],['pattern' 'cell' 'output' 'neuron' 'unit' 'neural' 'system' 'model'
+ 'input' 'network']
+['training' 'problem' 'error' 'set' 'data' 'model' 'network' 'algorithm'
+ 'function' 'learning'],['pattern' 'cell' 'output' 'neuron' 'unit' 'neural' 'system' 'model'
+ 'input' 'network']
+['problem' 'error' 'training' 'set' 'data' 'model' 'algorithm' 'network'
+ 'function' 'learning'],['pattern' 'cell' 'output' 'neuron' 'unit' 'neural' 'system' 'model'
+ 'input' 'network']
+['problem' 'error' 'training' 'data' 'set' 'model' 'algorithm' 'network'
+ 'function' 'learning'],['pattern' 'cell' 'output' 'neuron' 'unit' 'neural' 'system' 'model'
+ 'input' 'network']
+['problem' 'error' 'training' 'set' 'data' 'model' 'algorithm' 'network'
+ 'function' 'learning'],['pattern' 'cell' 'output' 'unit' 'neuron' 'neural' 'system' 'model'
+ 'input' 'network']
+['problem' 'error' 'training' 'set' 'data' 'model' 'algorithm' 'network'
+ 'function' 'learning'],['pattern' 'cell' 'output' 'unit' 'neuron' 'neural' 'system' 'model'
+ 'input' 'network']
+['problem' 'error' 'training' 'data' 'set' 'model' 'algorithm' 'function'
+ 'network' 'learning'],['pattern' 'cell' 'output' 'unit' 'neuron' 'neural' 'system' 'model'
+ 'input' 'network']
+['problem' 'error' 'training' 'data' 'set' 'model' 'algorithm' 'function'
+ 'network' 'learning'],['pattern' 'cell' 'output' 'unit' 'neural' 'neuron' 'system' 'model'
+ 'input' 'network']
+['problem' 'error' 'training' 'data' 'set' 'model' 'algorithm' 'function'
+ 'learning' 'network'],['pattern' 'cell' 'output' 'unit' 'neural' 'neuron' 'system' 'model'
+ 'input' 'network']
+['problem' 'error' 'training' 'data' 'set' 'model' 'algorithm' 'function'
+ 'learning' 'network'],['pattern' 'cell' 'output' 'unit' 'neural' 'neuron' 'system' 'model'
+ 'input' 'network']
+['problem' 'error' 'training' 'data' 'set' 'model' 'algorithm' 'function'
+ 'learning' 'network'],['pattern' 'output' 'cell' 'unit' 'neural' 'neuron' 'system' 'model'
+ 'input' 'network']
+['problem' 'error' 'training' 'data' 'set' 'model' 'algorithm' 'function'
+ 'learning' 'network'],['pattern' 'output' 'cell' 'unit' 'neural' 'neuron' 'system' 'model'
+ 'input' 'network']
